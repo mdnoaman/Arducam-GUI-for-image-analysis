@@ -1,5 +1,5 @@
 exposure, position, image count, comment
-12, 34, 1, this was not good
+12, 34, 1, bla bla
 12, 34, 2, maybefine
 234, 54,2, fasfdasd
 45, 23, 5, ffk
