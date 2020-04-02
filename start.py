@@ -184,8 +184,7 @@ class MovieThread():
 
 if __name__ == '__main__':
     cam = Camera_control()
-    filename ="conf/AR0135_RAW_12b_1280x964_16fps_myconfig.cfg"
-#    config_file_name = "AR0135_MONO_8b_1280x964_30fps.cfg"
+    filename ="AR0135_RAW_12b_1280x964_16fps_myconfig.cfg"
     expconf = "confg_exposure.txt"
     parent_conn, child_conn = Pipe()
     p1 = Process(target=cam.cameramain, args=(filename,expconf,child_conn,))
@@ -198,36 +197,3 @@ if __name__ == '__main__':
 
     p1.join()
     p2.join()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
