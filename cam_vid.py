@@ -219,9 +219,8 @@ class Camera_control():
    
 if __name__ == '__main__':
     cam = Camera_control()
-    mainconf ="conf/AR0135_RAW_12b_1280x964_16fps_myconfig.cfg"
+    mainconf ="AR0135_RAW_12b_1280x964_16fps_myconfig.cfg"
     expconf ="confg_exposure.txt"
-#    config_file_name = "conf/AR0135_MONO_8b_1280x964_30fps.cfg"
     parent_conn, child_conn = Pipe()
 
     p1 = Process(target=cam.cameramain, args=(mainconf,expconf,child_conn,))
@@ -231,28 +230,5 @@ if __name__ == '__main__':
     p2 = Process(target=cam.get_frame, args=(parent_conn, state,))
     p2.start()
     
-
     p1.join()
-    p2.join()
-
-
-    
-    
-    
-#%%
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    p2.join()    
